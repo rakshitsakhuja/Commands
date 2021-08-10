@@ -8,3 +8,7 @@ First
 then
 * mongorestore --db=new_db --collection=collection_name "F:\mongodump\collection.bson"
 
+# Convert BSON to csv
+
+* bsondump collection.bson > file.csv
+
