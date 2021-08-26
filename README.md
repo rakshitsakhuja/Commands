@@ -14,3 +14,20 @@ then
 
 * bsondump collection.bson > file.csv
 
+
+## Authentication in MongoDB
+1. mongosh
+2. use admin
+3. db.createUser({user:'rakshit', pwd: 'rakshit', roles:["userAdminAnyDatabase","dbAdmin","readWrite","root"]})
+     * root = will allow you to create read update all tables
+     * userAdminAnyDatabase = will allow you to create users
+     * dbAdmin
+     * readWrite = will give you permision to read write any table
+
+4. db.auth('rakshit', 'rakshit')
+
+5. Paste below code in /etc/mongod.conf
+      * security:
+      *    authorization: enabled
+6. sudo service mongod restart
+7. mongosh -u rakshit -p rakshit
