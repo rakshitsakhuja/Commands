@@ -16,6 +16,10 @@ then
 
 
 ## Authentication in MongoDB
+https://www.youtube.com/watch?v=bZhlX90m1cw 
+
+https://docs.anaconda.com/anaconda-repository/admin-guide/install/config/config-mongodb-authentication/
+
 1. mongosh
 2. use admin
 3. db.createUser({user:'rakshit', pwd: 'rakshit', roles:["userAdminAnyDatabase","dbAdmin","readWrite","root"]})
