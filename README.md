@@ -10,6 +10,9 @@ First
 then
 * mongorestore --db=new_db --collection=collection_name "F:\mongodump\collection.bson"
 
+In case of Authentication
+*  mongorestore -u rakshit -p rakshit --authenticationDatabase admin --collection="collection_name"  --db="new_db"  "F:\mongodump\collection.bson"
+
 ## Convert BSON to csv
 
 * bsondump collection.bson > file.csv
