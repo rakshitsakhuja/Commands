@@ -16,7 +16,13 @@ In case of Authentication
 ## Convert BSON to csv
 
 * bsondump collection.bson > file.csv
+## Add column in Mongodb in collection for all documents
 
+db.collection_name.updateMany({},{$set:{'col_name':''}})
+
+## Delete column in Mongodb in collection for all documents
+
+db.collection_name.updateMany({},{$unset:{'col_name':''}})
 
 ## Authentication in MongoDB
 https://www.youtube.com/watch?v=bZhlX90m1cw 
